@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="timer"></div>
+</body>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(pink, aqua)
+    }
+
+    .timer {
+        color: white;
+        font-size: 56px;
+        font-weight: bolder;
+        border: 5px solid white;
+        padding: 50px;
+        border-radius: 50%;
+    }
+</style>
+
+<script>
+    var time = document.getElementsByClassName("timer")
+
+    var timings = 10;
+    var i = 0;
+    var myInterval = setInterval(Timeout, 1000);
+    function Timeout() {
+
+        time[0].innerHTML = `${(timings * 10 - i) % 10}`;
+
+        i++;
+       
+    }
+
+</script>
+
+</html>

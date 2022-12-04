@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+     <h2>YOUR EB BILL STATUS </h2>
+     <h1>EB BILL</h1>
+    <h3>First 100 units free,<br> between 100 to 300 units @ 1unit=2 rupees <br> above 300 units @ 1unit=4 rupees</h3>
+    <label >Unit:</label>
+
+     <input type="text" id="txt" placeholder="Enter unit" value>
+     <button onclick="cla()">click</button>
+     <p id="demo"></p>
+   
+    <script>
+        function cla(){
+        var unit= document.getElementById("txt").value;
+        var output = "EB bill your payment";
+        var amount =0;
+
+
+        if (unit <= 100) {
+                amount = 0;
+            }
+            else if (unit >= 101 && unit<=300) {
+                amount = (unit - 100) * 2;
+            }
+            else {
+                amount = unit*4;
+            }
+            document.getElementById("demo").innerHTML = ( output +" Rs:"+ amount );
+    }
+
+    </script>
+</body>
+
+</html>
