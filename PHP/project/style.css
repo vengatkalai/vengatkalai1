@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.error{
+    color: red;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    align-items:center;
+}
+.wrapper{
+    position: sticky;
+    background-color:cadetblue;
+}
+.image{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    border:5px solid white;
+    overflow:hidden;
+
+
+}
+.image img{
+    width: 100%;
+    height:100%;
+    background-size:contain;
+}
