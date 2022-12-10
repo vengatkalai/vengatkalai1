@@ -13,15 +13,3 @@ else{
     y=z*punit;
     console.log(output+" rupees "+y);
 }
-
-
-
-
-
-
-
-
-
-
-
-
