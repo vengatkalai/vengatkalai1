@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <form action="" method="post" id="form">
+
+       
+        <input type="text" name="name" id="name" placeholder="name"><br><br>
+       
+        <input type="number" name="phone"  id="phone" placeholder="number" ><br><br>
+       
+        <input type="text" name="email"  id="email"  placeholder="email"><br><br>
+       
+        <input type="password" name="password"  id="password"  placeholder="password"><br><br>
+      
+        <input type="password" name="cpass"  id="cpass"  placeholder="cpass"><br><br>
+
+        <input type="submit" value="submit">
+ 
+    </form>
+
+<script>
+    
+    const form=document.getElementById("form");
+    const name=document.getElementById("name");
+    const phone=document.getElementById("phone");
+    const email=document.getElementById("email");
+    const password=document.getElementById("password");
+    const cpass=document.getElementById("cpass");
+    
+
+      form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        valueCheck();
+      });
+
+      function valueCheck(){
+        const namevalue=name.value.trim();
+        const phonevalue=phone.value.trim();
+        const emailvalue=email.value.trim();
+        const passwordvalue=password.value.trim();
+        const cpassvalue=cpass.value.trim();
+
+
+        if(namevalue ===''){
+           window.alert("fill your name");
+           return;
+        }
+
+        if(phonevalue ===''){
+            window.alert("Fill your phone number");
+            return;
+        }
+
+        if(emailvalue ===''){
+            window.alert("Fill your phone email");
+            return;
+        }
+
+       if(passwordvalue ===''){
+            window.alert("Fill your phone passwodg");
+            return;
+        } 
+
+       if(cpassvalue ===''){
+        window.alert("Fill your passwodg");
+        return;
+            
+        }else if(cpassvalue !== passwordvalue){
+            window.alert("check your password");
+            return;
+        }
+        else{
+            window.alert("Time is gone");
+            form.reset();
+        }
+      }
+
+
+</script>
+ 
+
+
+</body>
+</html>
